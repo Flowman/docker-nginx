@@ -1,11 +1,10 @@
-FROM nginx:1.9.14-alpine
+FROM nginx:1.10-alpine
 
 MAINTAINER Peter Szalatnay <theotherland@gmail.com>
 
 RUN \
-    apk add --update \
-        curl \
-    && rm -fr /var/cache/apk/*
+    apk add --update --no-cache \
+        curl
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/
