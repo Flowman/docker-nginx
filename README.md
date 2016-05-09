@@ -14,14 +14,16 @@ This image is based on the popular Alpine Linux project, available in the alpine
 
 ## Usage
 
-```
-$ docker run -d flowman/nginx:tag
+```bash
+docker run -d flowman/nginx:tag
 ```
 
 #### Exposing the port
 
 ```
-$ docker run -d -p 8080:80 flowman/nginx:tag
+docker run -d \
+           -p 8080:80 \
+           flowman/nginx:tag
 ```
 
 Then you can hit http://localhost:8080 or http://host-ip:8080 in your browser.
@@ -30,7 +32,7 @@ Then you can hit http://localhost:8080 or http://host-ip:8080 in your browser.
 
 Example Rancher docker-compose stack
 
-```
+```yaml
 nginx:
   image: flowman/nginx:1.10.0
   labels:
@@ -56,7 +58,7 @@ www-data:
 
 Example docker-compose file
 
-```
+```yaml
 version: '2'
 services:
   nginx:
@@ -81,7 +83,7 @@ services:
 
 For example, if you need to edit the config files, edit the default.conf and than build-it.
 
-```
+```bash
 git clone git@github.com:Flowman/docker-nginx.git
 cd ./docker-nginx
 docker build --rm -t flowman/nginx .
