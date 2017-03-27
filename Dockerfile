@@ -1,4 +1,4 @@
-FROM nginx:1.10-alpine
+FROM nginx:1.11.10-alpine
 
 MAINTAINER Peter Szalatnay <theotherland@gmail.com>
 
