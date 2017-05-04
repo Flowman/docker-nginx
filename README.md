@@ -34,7 +34,7 @@ Example Rancher docker-compose stack
 
 ```yaml
 nginx:
-  image: flowman/nginx:1.10.0
+  image: flowman/nginx:latest
   labels:
     io.rancher.sidekicks: php-fpm, www-data
   volumes_from:
@@ -62,7 +62,7 @@ Example docker-compose file
 version: '2'
 services:
   nginx:
-    image: flowman/nginx:1.10.0
+    image: flowman/nginx:latest
     ports:
      - "80:80"
     volumes_from:
