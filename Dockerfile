@@ -1,4 +1,4 @@
-FROM nginx:1.12.2-alpine
+FROM nginx:1.13.8-alpine
 
 MAINTAINER Peter Szalatnay <theotherland@gmail.com>
 
@@ -8,3 +8,4 @@ RUN \
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
+COPY datadog.conf /etc/nginx/conf.d/datadog.conf
