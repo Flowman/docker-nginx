@@ -1,11 +1,9 @@
-FROM nginx:1.18.0-alpine
+FROM nginx:1.19.8-alpine
 
-MAINTAINER Peter Szalatnay <theotherland@gmail.com>
+LABEL maintainer="Peter Szalatnay <theotherland@gmail.com>"
 
-RUN \
+RUN set -eux; \
     apk add --update --no-cache \
-        curl
+        curl;
 
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY default.conf /etc/nginx/conf.d/default.conf
-COPY datadog.conf /etc/nginx/conf.d/datadog.conf
+COPY dockerdir /
