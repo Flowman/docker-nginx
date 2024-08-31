@@ -1,4 +1,4 @@
-FROM nginx:1.19.8-alpine
+FROM nginx:1.27.1-alpine-slim
 
 LABEL maintainer="Peter Szalatnay <theotherland@gmail.com>"
 
