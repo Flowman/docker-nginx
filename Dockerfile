@@ -1,4 +1,4 @@
-FROM nginx:1.28.0-alpine-slim
+FROM nginx:1.29.0-alpine-slim
 
 LABEL maintainer="Peter Szalatnay <theotherland@gmail.com>" \
       description="nginx optimized for !Joomla"
